@@ -19,13 +19,37 @@ ul{
 }
 
 .productName{
+  width: 100%;
 	position: relative;
-	background-color:rgba(255, 255, 255, 0.5);
-	border-radius: 10px 10px 0 0;
-	padding: 5px;
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	padding-left: 10px;
 	/*box-shadow: -3px -3px 0px #69c9d0, 3px 3px 0px #ee1d52; */
 }
+
+.productName h3{
+	text-align: left;
+	margin: 0;
+	width: 100%;
+	font-size: 18px;
+	color: #333;
+  padding: 0;
+}
+
+.productDescription{
+  padding: 20px;
+  height: 60px;
+  text-transform: none;
+  overflow: scroll;
+  scroll-behavior: smooth;
+
+  text-overflow: ellipsis;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.productDescription::-webkit-scrollbar{
+  display: none;
+}
+
 
 .buttons{
 	display: flex;
@@ -36,27 +60,63 @@ ul{
 	background-attachment: fixed;
 }
 
+.pageTitles{
+  display: inline-flex;
+  margin: 0 0 0 30px;
+  padding: 10px 10px 0 10px ;
+  transform: translateY(-100%);
+}
+
+.pageTitles li{
+  padding: 6px 12px 6px 12px;
+  background-color: #ddd;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  font-style: italic;
+}
+
+li.currentPage{
+  background-color: #fff;
+  box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.2);
+}
+
 .productSection{
-	padding-left: 10em;
-	padding-right: 10em;
-	padding-top: 20px;
+	padding-top: 0;
+  border-radius: 20px;
+  margin: 0 10px 10px 10px;
+  padding: 0 30px 30px 30px;
 }
 
-.productSection h1{
-  color: #fff;
-  transform: translateY(-139%);
-  text-transform: uppercase;
-  font-size: 24px;
+.productSection a{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  text-align: center;
+  justify-content: space-between;
 }
 
+.gridItem{
+  width: 220px;
+  margin: 20px;
+}
 
 .price{
+  display: inline-flex;
 	position: relative;
-	align-self: flex-end;
-	background-color: #3B9DFF;
+	align-self: center;
+  text-align: center;
+	background-color: #444;
 	color: #fff;
-	border-radius: 10px;
-		margin: 5px;
+	border-radius: 0 0 20px 20px;
+  width: 100%;
+  transform: translateY(50%);
+}
+
+.price:hover{
+  width: 100%;
+  text-align: center;
+  background-color: #00aeff;
+  transition: background-color.5s ease;
 }
 
 .price h2{
@@ -65,6 +125,12 @@ ul{
 	margin-right: 8px;
 	text-align: center;
 	font-size: 13px;
+  width: 100%;
+}
+
+.price p{
+  text-align: center;
+  width: 100%;
 }
 
 .grid{
@@ -74,6 +140,7 @@ ul{
 	flex-wrap: wrap;
 	justify-content: center;
 	justify-self: center;
+  margin: 50px;
 }
 
 .grid a{
@@ -89,6 +156,7 @@ ul{
 	background-color: #eee;
 	border-radius: 10px;
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .5s ease;
 }
 
 .product a{
@@ -98,10 +166,24 @@ ul{
 		height: 100%;
 }
 
+.product p{
+  transform: translate(-10%, -20%);
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #00aeff;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bolder;
+  border-radius: 20px;
+}
+
 .product:hover{
 	background-color: #fff;
 	cursor: pointer;
-	transition: background-size .5s ease;
+  box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.6);
+	transition: box-shadow .2s ease;
 	background-size: 140% 140%;
 }
 
@@ -190,6 +272,73 @@ a.logo {
   z-index: 0;
   text-decoration: none;
   padding: 15px;
+  background-position: center;
+  color: #fff;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: stretch;
+  padding-top: 15px;
+
+}
+
+a.social1 {
+  margin-left: 20px;
+  margin-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-image: url(images/tiktok.png);
+  background-position: bottom;
+  background-size: contain;
+  font-weight: 600;
+  font-size: 80px;
+  text-align: center;
+  z-index: 0;
+  text-decoration: none;
+  background-position: center;
+  color: #fff;
+}
+
+a.social2 {
+  margin-left: 20px;
+  margin-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-image: url(images/twitter.png);
+  background-position: bottom;
+  background-size: contain;
+  font-weight: 600;
+  font-size: 80px;
+  text-align: center;
+  z-index: 0;
+  text-decoration: none;
+  background-position: center;
+  color: #fff;
+}
+
+a.social3 {
+  margin-left: 20px;
+  margin-right: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-image: url(images/etsy.png);
+  background-position: bottom;
+  background-size: contain;
+  font-weight: 600;
+  font-size: 80px;
+  text-align: center;
+  z-index: 0;
+  text-decoration: none;
   background-position: center;
   color: #fff;
 }
@@ -355,7 +504,6 @@ button:hover {
   background-color: #fff;
   padding-top: 20px;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 40px 40px;
 }
 
 .column2 {
@@ -369,8 +517,10 @@ button:hover {
 
 .content {
   padding-bottom: 120px;
-    background-image: url(images/plants.jpg);
+    background-image: url(images/bg.jpg);
   background-attachment: fixed;
+  background-size: auto;
+  background-position: 0 110%;
 }
 
 #content__top {
@@ -381,7 +531,6 @@ button:hover {
   background-color: #eee;
   margin: 0;
   width: 100%;
-  background-image: url(images/plants.jpg);
    background-attachment: fixed;
 }
 
@@ -421,10 +570,12 @@ ul {
 }
 
 .content__top--right {
-  background-color: #fff;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
   padding-top: 20px;
 /*  border-radius: 0 0 60px 0;*/
 }
@@ -1086,17 +1237,17 @@ h4 {
 }
 
 .touchpoint__description::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 .touchpoint__description::-webkit-scrollbar-thumb {
-  background: #eee; 
+  background: #eee;
   border-radius: 10px;
 }
 
 .touchpoint__description::-webkit-scrollbar-thumb:hover {
-  background: #1a1a1a; 
+  background: #1a1a1a;
 }
 
 .flexy {
@@ -1129,13 +1280,4 @@ h4 {
 
 .touchpoint__content:hover .flexy--image {
 	opacity: 1;
-}
-
-.productName h3{
-	text-align: left;
-	letter-spacing: 1px;
-	margin: 0;
-	width: 190px;
-	font-size: 18px;
-	color: #333;
 }
