@@ -15,9 +15,16 @@ ul{
 	flex-wrap: wrap;
 	justify-content: center;
 	justify-items: space-around;
-	padding: 10px;
 	list-style-type: none;
-	width: 50%;
+}
+
+.productName{
+	position: relative;
+	background-color:rgba(255, 255, 255, 0.5);
+	border-radius: 10px 10px 0 0;
+	padding: 5px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	/*box-shadow: -3px -3px 0px #69c9d0, 3px 3px 0px #ee1d52; */
 }
 
 .buttons{
@@ -25,11 +32,39 @@ ul{
 	align-items: center;
 	align-content: center;
 	justify-content: center;
+	background-image: url(images/plants.jpg);
+	background-attachment: fixed;
 }
 
 .productSection{
 	padding-left: 10em;
 	padding-right: 10em;
+	padding-top: 20px;
+}
+
+.productSection h1{
+  color: #fff;
+  transform: translateY(-139%);
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+
+.price{
+	position: relative;
+	align-self: flex-end;
+	background-color: #3B9DFF;
+	color: #fff;
+	border-radius: 10px;
+		margin: 5px;
+}
+
+.price h2{
+	color: #fff;
+	margin-left: 8px;
+	margin-right: 8px;
+	text-align: center;
+	font-size: 13px;
 }
 
 .grid{
@@ -49,28 +84,43 @@ ul{
 .product{
 	width: 200px;
 	height: 200px;
-	align-items: center;
 	text-align: center;
 	margin: 10px;
 	background-color: #eee;
+	border-radius: 10px;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.product a{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
 }
 
 .product:hover{
 	background-color: #fff;
 	cursor: pointer;
+	transition: background-size .5s ease;
+	background-size: 140% 140%;
+}
+
+.product #p1{
+	background-color: #000;
 }
 
 li{
-	padding: 20px;
+	padding: 5px;
 	position: relative;
-	height: 60px;
 	justify-content: center;
 }
 
 h1 {
 	font-family: 'Nunito Sans', sans-serif;
-  font-size: 25px;
+  font-size: 18px;
+  letter-spacing: 1px;
   font-weight: normal;
+  font-style: none;
   padding: 0;
   margin: 0;
   /*  font-family: 'Major Mono Display', sans-serif;*/
@@ -90,6 +140,8 @@ h2.project-title {
 	font-family: 'Nunito Sans', sans-serif;
 	color: #fff;
 }
+
+
 
 .header ul {
   position: relative;
@@ -258,9 +310,7 @@ button.alt:hover {
   font-size: 12px;
   border-radius: 30px;
   border: none;
-  padding: 10px 35px;
   color: #fff;
-  max-height: 40px;
   border: solid 3px #3B9DFF;
   transition: background-color 3s ease;
   box-shadow: 1px 1px 10px #bbb;
@@ -303,7 +353,9 @@ button:hover {
   justify-content: flex-start;
   width: 100%;
   background-color: #fff;
-  padding-top: 44px;
+  padding-top: 20px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 40px 40px;
 }
 
 .column2 {
@@ -316,17 +368,33 @@ button:hover {
 }
 
 .content {
-  padding: 0;
+  padding-bottom: 120px;
+    background-image: url(images/plants.jpg);
+  background-attachment: fixed;
 }
 
-.content__top {
-  position: relative;
-  flex-direction: column;
+#content__top {
+	display: inline-flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #eee;
   margin: 0;
   width: 100%;
+  background-image: url(images/plants.jpg);
+   background-attachment: fixed;
+}
+
+.lcurve{
+	min-width: 100px;
+	min-height: 100px;
+		height: 100%;
+}
+
+.rcurve{
+	min-width: 100px;
+	min-height: 100px;
+	height: 100%;
 }
 
 ul {
@@ -341,9 +409,14 @@ ul {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-  background-color: #fff;
-    padding-top: 20px;
-  padding-bottom: 20px;
+  background-color: #333;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  border-radius: 100px;
+  color: #fff;
+  box-shadow: -3px -3px 0px #69c9d0, 3px 3px 0px #ee1d52, 2px 4px 4px #000;
+  transform: translateY(50%);
 /*  padding: 40px 50px 0 50px;*/
 }
 
@@ -354,6 +427,10 @@ ul {
   justify-content: center;
   padding-top: 20px;
 /*  border-radius: 0 0 60px 0;*/
+}
+
+.tiktok{
+	transform: scale(0.6);
 }
 
 .curve {
@@ -1052,4 +1129,13 @@ h4 {
 
 .touchpoint__content:hover .flexy--image {
 	opacity: 1;
+}
+
+.productName h3{
+	text-align: left;
+	letter-spacing: 1px;
+	margin: 0;
+	width: 190px;
+	font-size: 18px;
+	color: #333;
 }
